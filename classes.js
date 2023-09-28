@@ -1,5 +1,5 @@
 class Participante {
-    constructor(nome, cpf, dataDeNacimento){
+    constructor(nome, cpf, dataDeNacimento) {
         this.nome = nome;
         this.cpf = cpf;
         this.dataDeNacimento = dataDeNacimento;
@@ -7,20 +7,16 @@ class Participante {
 
 }
 
-class Aluno {
+class Aluno extends Participante {
     constructor(nome, cpf, dataDeNacimento, matricula) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.dataDeNacimento = dataDeNacimento;
+        super(nome, cpf, dataDeNacimento);
         this.matricula = matricula;
     }
 
 }
-class Professor {
+class Professor extends Participante {
     constructor(nome, cpf, dataDeNacimento, siape, formacao) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.dataDeNacimento = dataDeNacimento;
+        super(nome, cpf, dataDeNacimento);
         this.siape = siape;
         this.formacao = formacao;
     }
